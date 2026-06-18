@@ -762,8 +762,8 @@ button { border: none; cursor: pointer; font: inherit; background: none; }
 }
 
 .chat-avatar {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   background: rgba(99,102,241,0.25);
   border: 1px solid rgba(99,102,241,0.4);
@@ -772,6 +772,23 @@ button { border: none; cursor: pointer; font: inherit; background: none; }
   justify-content: center;
   color: #a5b4fc;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+/* Bot avatar — image fills the circle */
+.chat-avatar--bot {
+  background: none;
+  border: 1.5px solid rgba(255,255,255,0.18);
+  padding: 0;
+}
+
+.chat-avatar--bot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top; /* crop to show face/upper area */
+  display: block;
+  border-radius: 50%;
 }
 
 .chat-msg--user .chat-avatar {

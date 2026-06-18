@@ -379,11 +379,12 @@ NEVER use markdown formatting of any kind. No asterisks (**bold**), no underscor
     wrap.className = `chat-msg chat-msg--${role === 'user' ? 'user' : 'bot'}`;
 
     const avatar = document.createElement('div');
-    avatar.className = 'chat-avatar';
     if (role === 'user') {
+      avatar.className = 'chat-avatar';
       avatar.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`;
     } else {
-      avatar.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>`;
+      avatar.className = 'chat-avatar chat-avatar--bot';
+      avatar.innerHTML = `<img src="bot-avatar.jpg" alt="Bot" />`;
     }
 
     const bubble = document.createElement('div');
