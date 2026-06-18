@@ -480,7 +480,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initHamburger();
   initSmoothScroll();
-  initStars();
+  // Background is now pure CSS (no canvas)
+
   initChatbot();
 });
 
